@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <header class="hero">
+    <header class="hero fade-in">
       <h1>Welcome to Pancoran Soccer Field</h1>
       <p>Your destination for the best soccer fields and basketball courts in Jakarta!</p>
     </header>
 
-    <section class="features">
+    <section class="features fade-in">
       <h2>Why Choose Us?</h2>
       <ul>
         <li>✅ Two professional soccer fields that meet FIFA standards</li>
@@ -15,7 +15,7 @@
       </ul>
     </section>
 
-    <section class="cta">
+    <section class="cta fade-in">
       <h2>Ready to Play?</h2>
       <p>Book your field today and enjoy a game!</p>
       <router-link to="/booking" class="book-button">Book Now</router-link>
@@ -83,5 +83,24 @@ h2 {
 .book-button:hover {
   background-color: #45a049;
   /* Darker green */
+}
+
+/* Animation Styles */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Start slightly lower */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* End in place */
+  }
 }
 </style>

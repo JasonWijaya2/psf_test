@@ -1,21 +1,21 @@
 <template>
     <div class="about-page">
-        <header class="about-header">
+        <header class="about-header fade-in">
             <h1>About Us</h1>
         </header>
         <div class="about-body">
-            <p>
+            <p class="fade-in">
                 Welcome to Pancoran Soccer Field! As a sports destination in the heart of Jakarta's city center, we are
                 offering two soccer fields and one 3x3 basketball court for your recreational and competitive
                 activities. Our goal is to make our venue the second home for soccer enthusiasts in Jakarta and its
                 surrounding areas.
             </p>
-            <p>
+            <p class="fade-in">
                 What sets us apart is the quality of our fields, which meet FIFA standards, ensuring an optimal playing
                 experience for soccer enthusiasts. Additionally, we provide comprehensive facilities to support
                 activities and offer comfort for visitors.
             </p>
-            <p>
+            <p class="fade-in">
                 Carefully prepared to meet the needs of sports enthusiasts, Pancoran Soccer Field delivers an
                 unparalleled experience in playing soccer and basketball. The support from the Air Force further
                 enhances our excellence in managing this facility, ensuring professional and reliable management.
@@ -52,6 +52,25 @@
 
 .about-body p {
     margin-bottom: 1.5rem;
+}
+
+/* Animation Styles */
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Start slightly lower */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* End in place */
+    }
 }
 
 @media (min-width: 1024px) {
